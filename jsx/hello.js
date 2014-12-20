@@ -1,8 +1,12 @@
-/* global React */
-window.test = function() {
+/* global define */
+define(["react"], function(React) {
   "use strict";
-  React.render(
-    <h1>Hello, world!</h1>,
-    document.getElementById('example')
-  );
-};
+  return {
+    hello: function() {
+      React.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+    }
+  };
+});
