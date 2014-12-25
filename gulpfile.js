@@ -19,8 +19,8 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('dist/assets/css'))
-    .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(gulp.dest('dist/assets/css'));
+    //.pipe(notify({ message: 'Styles task complete' }));
 });
 
 gulp.task('scripts', function() {  
@@ -31,15 +31,15 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/assets/js'))
-    .pipe(notify({ message: 'Scripts task complete' }));
+    .pipe(gulp.dest('dist/assets/js'));
+    //.pipe(notify({ message: 'Scripts task complete' }));
 });
 
 gulp.task('images', function() {  
   return gulp.src('src/images/*')
     .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/assets/img'))
-    .pipe(notify({ message: 'Images task complete' }));
+    .pipe(gulp.dest('dist/assets/img'));
+    //.pipe(notify({ message: 'Images task complete' }));
 });
 
 gulp.task('clean', function() {  

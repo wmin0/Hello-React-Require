@@ -1,11 +1,11 @@
-/* global define */
-define(["react"], function(React) {
+/* global define, React */
+define("hello", ["Component"], function(Component) {
   "use strict";
   return {
     hello: function() {
       React.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('example')
+        <Component />,
+        document.querySelector('body')
       );
     }
   };

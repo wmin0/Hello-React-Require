@@ -7,8 +7,11 @@ require({
 });
 
 require([
-  'hello'
-], function (hello) {
-  "use strict";
-  hello.hello();
+  'react'
+], function (React) {
+  window.React = React;
+  require(['hello'], function(hello) {
+    "use strict";
+    hello.hello();
+  });
 });
